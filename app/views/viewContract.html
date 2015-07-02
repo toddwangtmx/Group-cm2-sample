@@ -1,3 +1,18 @@
-<div>
-  Put your body here.
+<div ng-controller="viewContractCtrl">
+    <table class="table table-bordered">
+        <tr>
+            <th>Contract Name</th>
+            <th>Cell Provider</th>
+            <th>Cell Receiver</th>
+            <th>Contract Type</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat="contract in contracts.data">
+            <td>{{contract.name}}</td>
+            <td>{{contract.provider}}</td>
+            <td>{{contract.receiver}}</td>
+            <td>{{contract.type}}</td>
+            <td></td>
+        </tr>
+    </table>
 </div>

@@ -12,6 +12,6 @@ angular.module('cm2App')
     getUserService.getUser().$promise.then(function(response) {
       $scope.userName = response.userName;
     });
-
+/*response: json response from server*/
     console.log('Root state');
   });

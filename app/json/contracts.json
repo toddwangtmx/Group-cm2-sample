@@ -1,0 +1,15 @@
+{
+	"data":
+[
+{
+    "name": "Joe",
+    "provider": "ATT",
+    "receiver": "iPhone",
+    "type": "normal"
+}, {
+    "name": "John",
+    "provider": "T-mobile",
+    "receiver": "iPhone8",
+    "type": "innormal"
+}]
+}

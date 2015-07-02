@@ -1,6 +1,9 @@
 'use strict';
 
 angular.module('cm2App')
-  .controller('viewContractCtrl', function($scope) {
-    console.log('View contract state');
-  });
+    .controller('viewContractCtrl', function($scope, getContractService) {
+        $scope.contracts = [];
+        getContractService.getContract(function(response) {
+            $scope.contracts = response.data;
+        });
+    });
