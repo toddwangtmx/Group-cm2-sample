@@ -14,4 +14,9 @@ angular.module('cm2App')
     });
 
     console.log('Root state');
+  })
+
+  .controller('CurrentDate', function ($scope)
+  {
+    $scope.date = new Date();
   });
