@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var contractList = require('./routes/contractList');
+var contract = require('./routes/contract');
 
 var app = express();
 
@@ -24,7 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/api/getuser', users);
-
+app.use('/api/contractList', contractList);
+app.use('/api/contract', contract);
 
 
 console.log('CM2 Server started.....');

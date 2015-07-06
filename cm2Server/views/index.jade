@@ -3,3 +3,6 @@ extends layout
 block content
   h1= title
   p API: '/api/getuser'  method: GET Response: Json
+  p API: '/api/contractList'  method: GET Response: Json
+  p API: '/api/contract/:id'  method: GET Response: Json
+  p API: '/api/contract'  method: POST Response: Json Body: {contractInfo: {}}
