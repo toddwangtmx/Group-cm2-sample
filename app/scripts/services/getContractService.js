@@ -2,7 +2,7 @@
 
 angular.module('cm2App')
   .factory('getContractService', function($resource) {
-    return $resource('json/contracts.json', {}, {
+    return $resource('/api/contractList', {}, {
       getContract: {method: 'GET'}
     });
   });
