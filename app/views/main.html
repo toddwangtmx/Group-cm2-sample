@@ -2,10 +2,65 @@
   Put your header here. User name: {{userName}}
 </div>
 <div class="row">
+<div class="row">
+  Put your header here. User name: {{userName}}
+</div>
+<div class="row">
   <div class="col-xs-2">
     Left side Nav bar.
   </div>
   <div class="col-xs-10">
     <ui-view></ui-view>
+  </div>
+<table class="Header">
+<tbody>
+  <tr class="col-xs-3">
+    <tb class="CompanyIcon">
+      <img src="images/yeoman.png" rel="icon">
+    </tb>
+    <tb ng-controller="rootCtrl">Hello: {{userName}}
+    </tb>
+    <tb ng-controller="CurrentDate">
+      {{date | date:'yyyy-MM-dd'}}
+    </tb>
+  </tr>
+  <tr class="Nav-Header">
+      <div class="col-xs-2">
+          <tb>Home</tb>
+          <tb>Optimization</tb>
+          <tb>Something</tb>
+          <tb>Something</tb>
+          <tb>Rule Admin</tb>
+      </div>
+  </tr>
+</tbody>
+</table>
+    <input type="text" class="form-control ng-valid ng-dirty" ng-model="searchKeyword">
+    <table class="table">
+	<tr>
+		<th>Name
+		</th>
+		<th>receiver
+		</th>
+		<th>provider
+		</th>
+		<th>
+		contact info	
+        </th>
+		<th>Action
+		</th>
+	</tr>
+	<tr ng-repeat="company in companies  | filter: searchKeyword ">
+		<td>
+		</td>
+		<td>
+		</td>
+		<td>
+		</td>
+		<td>
+		<input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow(company.name)"/>
+		</td>
+	</tr>
+</table>
   </div>
 </div>
