@@ -35,32 +35,5 @@
   </tr>
 </tbody>
 </table>
-    <input type="text" class="form-control ng-valid ng-dirty" ng-model="searchKeyword">
-    <table class="table">
-	<tr>
-		<th>Name
-		</th>
-		<th>receiver
-		</th>
-		<th>provider
-		</th>
-		<th>
-		contact info	
-        </th>
-		<th>Action
-		</th>
-	</tr>
-	<tr ng-repeat="company in companies  | filter: searchKeyword ">
-		<td>
-		</td>
-		<td>
-		</td>
-		<td>
-		</td>
-		<td>
-		<input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow(company.name)"/>
-		</td>
-	</tr>
-</table>
   </div>
 </div>
