@@ -1,6 +1,7 @@
 <!doctype html>
-<html class="no-js">
-  <head>
+<html>
+
+<head>
     <meta charset="utf-8">
     <title>CM2 Sample</title>
     <meta name="description" content="">
@@ -14,17 +15,16 @@
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body ng-app="cm2App">
+</head>
+
+<body ng-app="cm2App">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <div class="container">
-      <ui-view></ui-view>
+        <div ui-view>
+        </div>    
     </div>
-
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -38,13 +38,13 @@
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/viewContractCtrl.js"></script>
-
+    <script src="scripts/services/getContractService.js"></script>
     <script src="scripts/services/getUserService.js"></script>
     <!-- endbuild -->
 </body>
+
 </html>

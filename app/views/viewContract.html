@@ -1,3 +1,20 @@
-<div>
-  Put your body here.
+<div style = "margin: 20px;">
+    <table class="table table-striped table-bordered table-hover">
+        <tr class="info">
+            <th>Contract Name</th>
+            <th>Cell Provider</th>
+            <th>Cell Receiver</th>
+            <th>Contract Type</th>
+            <th>Value</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat="contract in contracts">
+            <td>{{contract.contractName}}</td>
+            <td>{{contract.provider}}</td>
+            <td>{{contract.receiver}}</td>
+            <td>{{contract.type}}</td>
+            <td>{{contract.value}}</td>
+            <td></td>
+        </tr>
+    </table>
 </div>
