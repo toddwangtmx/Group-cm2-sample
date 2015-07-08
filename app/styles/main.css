@@ -1,6 +1,8 @@
-.input{
-	width:100px;
+.inputboxes{
+float:left;
+width:180px;
+margin:5px;
 }
-.inputbox{
-	float:left;
+table tr td{
+	width: 300px;
 }
