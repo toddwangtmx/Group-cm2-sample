@@ -1,6 +1,21 @@
-.input{
-	width:100px;
-}
+
 .inputbox{
 	float:left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+#contractName{
+	width:285px;
+}
+#provider{
+	width: 145px;
+}
+#receiver{
+	width: 148px;
+}
+#contractType{
+	width:182px;
+}
+#value{
+	width: 75px ;
 }
