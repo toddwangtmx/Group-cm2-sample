@@ -1,39 +1,40 @@
 <div class="row">
-  Put your header here. User name: {{userName}}
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" style="padding-top: 10px">
+                    <img alt="Brand" src="images/yeoman.png" style="width:45px">
+                </a>
+            </div>
+            <p class="navbar-text navbar-right" ng-controller="rootCtrl">Hello: {{userName}}&nbsp&nbsp {{date | date:'yyyy-MM-dd'}}</p>
+            <ul class="nav nav-pills" style="padding-top: 5px">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Optimization</a></li>
+                <li role="presentation"><a href="#">Hello World</a></li>
+                <li role="presentation"><a href="#">Hello World</a></li>
+                <li role="presentation"><a href="#">Rule Admin</a></li>
+            </ul>
+        </div>
+    </nav>
 </div>
-<div class="row">
-<div class="row">
+<!-- <div class="row">
   Put your header here. User name: {{userName}}
-</div>
+</div> -->
 <div class="row">
-  <div class="col-xs-2">
-    Left side Nav bar.
-  </div>
-  <div class="col-xs-10">
-    <ui-view></ui-view>
-  </div>
-<table class="Header">
-<tbody>
-  <tr class="col-xs-3">
-    <tb class="CompanyIcon">
-      <img src="images/yeoman.png" rel="icon">
-    </tb>
-    <tb ng-controller="rootCtrl">Hello: {{userName}}
-    </tb>
-    <tb ng-controller="CurrentDate">
-      {{date | date:'yyyy-MM-dd'}}
-    </tb>
-  </tr>
-  <tr class="Nav-Header">
-      <div class="col-xs-2">
-          <tb>Home</tb>
-          <tb>Optimization</tb>
-          <tb>Something</tb>
-          <tb>Something</tb>
-          <tb>Rule Admin</tb>
-      </div>
-  </tr>
-</tbody>
-</table>
-  </div>
+    <div class="col-xs-2">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li><a href="#"><span class="glyphicon glyphicon-star"></span> Contracts</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-th-large"></span> Contracts</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-pushpin"></span> Contracts</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-paperclip"></span> Contracts</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-tag"></span> Contracts</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-10">
+        <ui-view></ui-view>
+    </div>
+</div>
 </div>
