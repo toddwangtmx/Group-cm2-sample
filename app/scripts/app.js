@@ -31,5 +31,11 @@ angular
         url: '/viewContract',
         templateUrl: 'views/viewContract.html',
         controller: 'viewContractCtrl'
-      });
+      })
+      .state('root.Managecontract',{
+        url:'/Managecontract',
+        templateUrl:'views/Managecontract.html',
+        controller:'ManagecontractCtrl'
+      })
+      ;
   });
