@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('cm2App')
-    .controller('viewContractCtrl', function($scope, getContractService) {
+    .controller('viewContractCtrl', function($scope, getContractService, $state) {
         $scope.contracts = [];
         getContractService.getContract(function(response) {
            $scope.contracts = response.contracts;
@@ -26,7 +26,10 @@ angular.module('cm2App')
 		    else{
 			  alert("canceled");
 		    }		
-	};     
+	};   
+	$scope.redirect=function(){
+		$state.go('root.Managecontract');
+	}  
 
         });
     });
