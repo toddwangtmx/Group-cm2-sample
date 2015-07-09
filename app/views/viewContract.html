@@ -31,7 +31,7 @@
             <td>{{contract.value}}</td>
             <td style="width: 115px">
                 <button class="btn btn-default btn-info" ng-click="redirect()">Go</button>
-                <button class="btn btn-default btn-danger" ng-click="removeRow(contracts.contractName)">Del</button>
+                <button class="btn btn-default btn-danger" ng-click="removeRow($index)">Del</button>
             </td>
         </tr>
     </table>
