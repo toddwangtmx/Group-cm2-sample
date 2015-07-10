@@ -8,10 +8,10 @@
             </div>
             <p class="navbar-text navbar-right" ng-controller="rootCtrl">Hello: {{userName}}&nbsp&nbsp {{date | date:'yyyy-MM-dd'}}</p>
             <ul class="nav nav-pills" style="padding-top: 5px">
-                <li role="presentation"><a href="#">Home</a></li>
-                <li role="presentation"><a href="#">Optimization</a></li>
-                <li role="presentation"><a href="#">Hello World</a></li>
-                <li role="presentation"><a href="#">Hello World</a></li>
+                <li role="presentation" ui-sref-active="selected"><a href="#">Home</a></li>
+                <li role="presentation" ui-sref-active="selected"><a href="#">Optimization</a></li>
+                <li role="presentation" ui-sref-active="selected"><a href="#">Hello World</a></li>
+                <li role="presentation" ui-sref-active="selected"><a href="#">Hello World</a></li>
                 <li role="presentation" ui-sref-active="selected"><a ui-sref="root.viewContract">Rule Admin</a></li>
             </ul>
         </div>

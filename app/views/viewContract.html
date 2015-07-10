@@ -1,38 +1,43 @@
-<div class="input" style="overflow:auto; height: 520px; padding-left:50px; padding-top:10px">
-    <div class="inputbox" id="contractName">Contract Name:
+<div class="input" style="padding-left:50px; padding-top:10px">
+    <h4>FILTER BY</h4>
+    <div class="inputbox" id="contractName">CONTRACT NAME:
         <input type="text" class="form-control" ng-model="search.contractName">
     </div>
-    <div class="inputbox" id="provider">Provider:
+    <div class="inputbox" id="provider">PROVIDER:
         <input type="text" class="form-control" ng-model="search.provider">
     </div>
-    <div class="inputbox" id="receiver">Receiver:
+    <div class="inputbox" id="receiver">RECEIVER:
         <input type="text" class="form-control" ng-model="search.receiver">
     </div>
-    <div class="inputbox" id="contractType">Contract Type:
+    <div class="inputbox" id="contractType">CONTRACT TYPE:
         <input type="text" class="form-control" ng-model="search.type">
     </div>
-    <div class="inputbox" id="value">Value:
+    <div class="inputbox" id="value">VALUE:
         <input type="text" class="form-control" ng-model="search.value">
     </div>
-    <table class="table table-striped table-bordered table-hover">
-        <tr class="info">
-            <th>Contract Name</th>
-            <th>Cell Provider</th>
-            <th>Cell Receiver</th>
-            <th>Contract Type</th>
-            <th>Value</th>
-            <th>Action</th>
-        </tr>
-        <tr ng-repeat="contract in contracts  | filter:search ">
-            <td>{{$index + 1}}. {{contract.contractName}}</td>
-            <td>{{contract.provider}}</td>
-            <td>{{contract.receiver}}</td>
-            <td>{{contract.type}}</td>
-            <td>{{contract.value}}</td>
-            <td style="width: 115px">
-                <button class="btn btn-default btn-info" ng-click="redirect()">Go</button>
-                <button class="btn btn-default btn-danger" ng-click="removeRow($index)">Del</button>
-            </td>
-        </tr>
+    <table class="table table-striped table-bordered table-hover fixed_headers">
+        <thead>
+            <tr>
+                <th>Contract Name</th>
+                <th>Cell Provider</th>
+                <th>Cell Receiver</th>
+                <th>Contract Type</th>
+                <th>Value</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="contract in contracts  | filter:search ">
+                <td>{{$index + 1}}. {{contract.contractName}}</td>
+                <td>{{contract.provider}}</td>
+                <td>{{contract.receiver}}</td>
+                <td>{{contract.type}}</td>
+                <td>{{contract.value}}</td>
+                <td style="width: 115px">
+                    <button class="btn btn-default btn-info" ng-click="redirect()">Go</button>
+                    <button class="btn btn-default btn-danger" ng-click="removeRow($index)">Del</button>
+                </td>
+            </tr>
+        </tbody>
     </table>
 </div>
