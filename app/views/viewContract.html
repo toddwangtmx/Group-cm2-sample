@@ -1,4 +1,4 @@
-<div class="input" style="overflow:auto; height: 520px; padding-left:50px; padding-top:10px">
+<div class="input" >
     <div class="inputbox" id="contractName">Contract Name:
         <input type="text" class="form-control" ng-model="search.contractName">
     </div>
@@ -29,8 +29,7 @@
             <td>{{contract.receiver}}</td>
             <td>{{contract.type}}</td>
             <td>{{contract.value}}</td>
-            <td><input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow(contracts.contractName)"/><input type="button" value="redirect" class="btn btn-primary" ng-click="redirect()"/></td>
-            <td style="width: 115px">
+            <td>
                 <button class="btn btn-default btn-info" ng-click="redirect()">Go</button>
                 <button class="btn btn-default btn-danger" ng-click="removeRow($index)">Del</button>
             </td>
