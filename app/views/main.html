@@ -8,11 +8,11 @@
             </div>
             <p class="navbar-text navbar-right" ng-controller="rootCtrl">Hello: {{userName}}&nbsp&nbsp {{date | date:'yyyy-MM-dd'}}</p>
             <ul class="nav nav-pills" style="padding-top: 5px">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Home</a></li>
                 <li role="presentation"><a href="#">Optimization</a></li>
                 <li role="presentation"><a href="#">Hello World</a></li>
                 <li role="presentation"><a href="#">Hello World</a></li>
-                <li role="presentation"><a href="#">Rule Admin</a></li>
+                <li role="presentation" ui-sref-active="selected"><a ui-sref="root.viewContract">Rule Admin</a></li>
             </ul>
         </div>
     </nav>
@@ -25,11 +25,11 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li><a href="#"><span class="glyphicon glyphicon-star"></span> Contracts</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-th-large"></span> Contracts</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-pushpin"></span> Contracts</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-paperclip"></span> Contracts</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-tag"></span> Contracts</a></li>
+                <li ui-sref-active="selected"><a ui-sref="root.viewContract"><span class="glyphicon glyphicon-star"></span> View Contracts</a></li>
+                <li ui-sref-active="selected"><a ui-sref="root.manageContract"><span class="glyphicon glyphicon-th-large"></span> Manage Contracts</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-pushpin"></span> Function Corps</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-paperclip"></span> Groups</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-tag"></span> Users</a></li>
             </ul>
         </div>
     </div>

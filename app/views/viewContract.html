@@ -1,17 +1,17 @@
-<div class="input">
-    <div class="inputbox" id="contractName">contractname:
+<div class="input" style="overflow:auto; height: 520px; padding-left:50px; padding-top:10px">
+    <div class="inputbox" id="contractName">Contract Name:
         <input type="text" class="form-control" ng-model="search.contractName">
     </div>
-    <div class="inputbox" id="provider">provider:
+    <div class="inputbox" id="provider">Provider:
         <input type="text" class="form-control" ng-model="search.provider">
     </div>
-    <div class="inputbox" id="receiver">receiver:
+    <div class="inputbox" id="receiver">Receiver:
         <input type="text" class="form-control" ng-model="search.receiver">
     </div>
-    <div class="inputbox" id="contractType">contracttype:
+    <div class="inputbox" id="contractType">Contract Type:
         <input type="text" class="form-control" ng-model="search.type">
     </div>
-    <div class="inputbox" id="value">value:
+    <div class="inputbox" id="value">Value:
         <input type="text" class="form-control" ng-model="search.value">
     </div>
     <table class="table table-striped table-bordered table-hover">
@@ -24,12 +24,19 @@
             <th>Action</th>
         </tr>
         <tr ng-repeat="contract in contracts  | filter:search ">
-            <td>{{contract.contractName}}</td>
+            <td>{{$index + 1}}. {{contract.contractName}}</td>
             <td>{{contract.provider}}</td>
             <td>{{contract.receiver}}</td>
             <td>{{contract.type}}</td>
             <td>{{contract.value}}</td>
+<<<<<<< HEAD
             <td><input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow(contracts.contractName)"/><input type="button" value="redirect" class="btn btn-primary" ng-click="redirect()"/></td>
+=======
+            <td style="width: 115px">
+                <button class="btn btn-default btn-info" ng-click="redirect()">Go</button>
+                <button class="btn btn-default btn-danger" ng-click="removeRow($index)">Del</button>
+            </td>
+>>>>>>> origin/Group-cm2-contractList
         </tr>
     </table>
 </div>
