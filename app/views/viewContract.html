@@ -15,6 +15,7 @@
     <div class="inputbox" id="value">VALUE:
         <input type="text" class="form-control" ng-model="search.value">
     </div>
+    <!-- <<<<<<< HEAD -->
     <table class="table table-striped table-bordered table-hover fixed_headers">
         <thead>
             <tr>
@@ -27,7 +28,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="contract in contracts  | filter:search ">
+            <tr ng-repeat="contract in filteredcontract=(contracts   | filter:search )">
                 <td>{{$index + 1}}. {{contract.contractName}}</td>
                 <td>{{contract.provider}}</td>
                 <td>{{contract.receiver}}</td>
@@ -35,9 +36,39 @@
                 <td>{{contract.value}}</td>
                 <td style="width: 115px">
                     <button class="btn btn-default btn-info" ng-click="redirect()">Go</button>
-                    <button class="btn btn-default btn-danger" ng-click="removeRow($index)">Del</button>
+                    <button class="btn btn-default btn-danger" ng-click="removeRow(contract)">Del</button>
                 </td>
+            </tr>
+            <tr>
+                <td colspan = "6" ng-show="!filteredcontract.length" style="width:895px"> No data to show</td>
             </tr>
         </tbody>
     </table>
+    <!-- =======
+    <table class="table table-striped table-bordered table-hover">
+        <tr class="info">
+            <th>Contract Name</th>
+            <th>Cell Provider</th>
+            <th>Cell Receiver</th>
+            <th>Contract Type</th>
+            <th>Value</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat="contract in filteredcontract=(contracts  | filter:search) " >
+            <td>{{$index + 1}}. {{contract.contractName}}</td>
+            <td>{{contract.provider}}</td>
+            <td>{{contract.receiver}}</td>
+            <td>{{contract.type}}</td>
+            <td>{{contract.value}}</td>
+            <td>
+                <button class="btn btn-default btn-info" ng-click="redirect()">Go</button>
+                <button class="btn btn-default btn-danger" ng-click="removeRow($index)">Del</button>
+            </td>
+        </tr>
+        <td ng-show="!filteredcontract.length" >No data to show</td>
+        <tr>
+
+        </tr>
+            </table>
+>>>>>>> f4e0efb15ccb88929f2e6bbf7443e76746d30098 -->
 </div>

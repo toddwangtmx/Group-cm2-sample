@@ -1,103 +1,36 @@
-body {
-    padding-top: 60px;
-    background-image: url("../images/diamond.png");
+body{
+	padding-top: 60px;
 }
-/*fixed table header*/
-
-.fixed_headers td:nth-child(1),
-.fixed_headers th:nth-child(1) {
-    min-width: 270px;
-}
-
-.fixed_headers td:nth-child(2),
-.fixed_headers th:nth-child(2) {
-    min-width: 120px;
-}
-
-.fixed_headers td:nth-child(3),
-.fixed_headers th:nth-child(3) {
-    width: 135px;
-}
-
-.fixed_headers td:nth-child(4),
-.fixed_headers th:nth-child(4) {
-    width: 170px;
-}
-
-.fixed_headers td:nth-child(5),
-.fixed_headers th:nth-child(5) {
-    width: 80px;
-}
-
-.fixed_headers td:nth-child(6),
-.fixed_headers th:nth-child(6) {
-    width: 117px;
-}
-
-.fixed_headers thead {
-    background: #4ABAE3;
-    color: white;
-}
-
-.fixed_headers thead tr {
-    display: block;
-    position: relative;
-}
-
-.fixed_headers tbody {
-    display: block;
-    overflow: auto;
-    max-height: 330px;
-}
-/*end fixed table header*/
-
-.inputbox {
-    float: left;
-    margin-right: 5px;
-    margin-bottom: 10px;
+.inputbox{
+	float:left;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
 #contractName{
-	width:240px;
+	width:265px;
 }
 #provider{
-	width: 120px;
+	width: 131px;
 }
 #receiver{
-	width: 127px;
+	width: 136px;
 }
 #contractType{
-	width:155px;}
-#contractName {
-    width: 265px;
+	width:169px;
+}
+#value{
+	width: 70px ;
 }
 
-#provider {
-    width: 116px;
-}
-
-#receiver {
-    width: 131px;
-}
-
-#contractType {
-    width:px;
-}
-
-#value {
-    width: 80px;
-}
-
-.sidebar-nav .selected {
-    background-color: #7D8DE5;
-    border-radius: 10px;
-}
 /*!
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+
 /* Toggle Styles */
-/*#wrapper {
+
+#wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -107,12 +40,9 @@ body {
 
 #wrapper.toggled {
     padding-left: 250px;
-}*/
+}
 
 #sidebar-wrapper {
-    opacity: 0.8;
-    background: linear-gradient( -45deg, #F6F6F6, #8EA8FF);
-    margin-top: -9px;
     z-index: 1000;
     position: fixed;
     left: 250px;
@@ -125,7 +55,7 @@ body {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-/*
+
 #wrapper.toggled #sidebar-wrapper {
     width: 250px;
 }
@@ -139,7 +69,8 @@ body {
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
-}*/
+}
+
 /* Sidebar Styles */
 
 .sidebar-nav {
@@ -147,43 +78,36 @@ body {
     top: 0;
     width: 250px;
     margin: 0;
-    padding-top: 30px;
-    padding-left: 0px;
+    padding: 10px;
     list-style: none;
 }
 
 .sidebar-nav li {
-    font-size: 16px;
-    text-indent: 15px;
+	font-size: 20px;
+    text-indent: 25px;
     line-height: 40px;
 }
+/*.sidebar-nav li span{
+	color: #000000;
+}*/
 
 .sidebar-nav li a {
-    color: #57391C;
     display: block;
     text-decoration: none;
-}
-
-.sidebar-nav li a:visited {
-    color: #57391C;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #FFFFFF;
-    background: #606CB0;
-    border-radius: 10px;
-}
-/*.sidebar-nav li a:active {
-    text-decoration: none;
     background: #CCCCCC;
-}*/
-/*
+}
+
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
-}*/
-/*.sidebar-nav > .sidebar-brand {
+}
+
+.sidebar-nav > .sidebar-brand {
     height: 65px;
     font-size: 18px;
     line-height: 60px;
@@ -196,25 +120,30 @@ body {
 .sidebar-nav > .sidebar-brand a:hover {
     color: #fff;
     background: none;
-}*/
+}
 
-@media(min-width:1200px) {
+@media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
     }
+
     #wrapper.toggled {
         padding-left: 0;
     }
+
     #sidebar-wrapper {
         width: 250px;
     }
+
     #wrapper.toggled #sidebar-wrapper {
         width: 0;
     }
+
     #page-content-wrapper {
         padding: 20px;
         position: relative;
     }
+
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
