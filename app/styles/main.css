@@ -47,7 +47,7 @@ body {
 .fixed_headers tbody {
     display: block;
     overflow: auto;
-    max-height: 330px;
+    max-height: 380px;
 }
 /*end fixed table header*/
 

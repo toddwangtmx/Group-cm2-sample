@@ -32,10 +32,10 @@ angular
         templateUrl: 'views/viewContract.html',
         controller: 'viewContractCtrl'
       })
-      .state('root.Managecontract',{
-        url:'/Managecontract',
-        templateUrl:'views/Managecontract.html',
-        controller:'ManagecontractCtrl'
+      .state('root.manageContract',{
+        url:'/manageContract',
+        templateUrl:'views/manageContract.html',
+        controller:'manageContractCtrl'
       })
       ;
   });
