@@ -53,28 +53,28 @@ body {
 
 .inputbox {
     float: left;
-    margin-right: 1%;
+    margin-right: 5px;
     margin-bottom: 10px;
 }
 
 #contractName {
-    width: 31%;
+    width: 265px;
 }
 
 #provider {
-    width: 13%;
+    width: 116px;
 }
 
 #receiver {
-    width: 14.5%;
+    width: 131px;
 }
 
 #contractType {
-    width: 17.5%;
+    width:px;
 }
 
 #value {
-    width: 7%;
+    width: 80px;
 }
 
 .sidebar-nav .selected {
