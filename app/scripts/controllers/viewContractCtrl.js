@@ -6,10 +6,18 @@ angular.module('cm2App')
         getContractService.getContract(function(response) {
             $scope.contracts = response.contracts;
             console.log(response.contracts);
-
-            $scope.removeRow = function(index) {
+            $scope.removeRow = function(removeItem) {
+                var contracts = $scope.contracts;
+                var length = contracts.length;
+                var removeIndex = -1;
+                for (var ii = 0; ii < length; ii++) {
+                    if (angular.equals(contracts[ii], removeItem)) {
+                        removeIndex = ii;
+                        break;
+                    }
+                }
                 if (window.confirm("Are you sure???")) {
-                    $scope.contracts.splice(index, 1);
+                    $scope.contracts.splice(removeIndex, 1);
                 }
             }
             $scope.redirect = function() {
