@@ -23,7 +23,7 @@
             <th>Value</th>
             <th>Action</th>
         </tr>
-        <tr ng-repeat="contract in contracts  | filter:search ">
+        <tr ng-repeat="contract in filteredcontract=(contracts  | filter:search) " >
             <td>{{$index + 1}}. {{contract.contractName}}</td>
             <td>{{contract.provider}}</td>
             <td>{{contract.receiver}}</td>
@@ -34,5 +34,9 @@
                 <button class="btn btn-default btn-danger" ng-click="removeRow($index)">Del</button>
             </td>
         </tr>
-    </table>
+        <td ng-show="!filteredcontract.length" >No data to show</td>
+        <tr>
+
+        </tr>
+            </table>
 </div>
