@@ -4,7 +4,6 @@ angular.module('cm2App')
     .controller('viewContractCtrl', function($scope, getContractService, $state) {
         $scope.contracts = [];
         getContractService.getContract(function(response) {
-<<<<<<< HEAD
            $scope.contracts = response.contracts;
            console.log(response.contracts);
            $scope.removeRow = function(name){
@@ -31,7 +30,6 @@ angular.module('cm2App')
 	$scope.redirect=function(){
 		$state.go('root.Managecontract');
 	}  
-=======
             $scope.contracts = response.contracts;
             console.log(response.contracts);
 
@@ -43,7 +41,6 @@ angular.module('cm2App')
             $scope.redirect = function() {
                 $state.go('root.manageContract');
             }
->>>>>>> origin/Group-cm2-contractList
 
         });
     });

@@ -20,7 +20,6 @@ angular
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/root/viewContract');
 
-<<<<<<< HEAD
     $stateProvider
       .state('root', {
         url: '/root',
@@ -40,7 +39,6 @@ angular
       })
       ;
   });
-=======
         $stateProvider
             .state('root', {
                 url: '/root',
@@ -59,4 +57,3 @@ angular
                 controller: 'manageContractCtrl'
             });
     });
->>>>>>> origin/Group-cm2-contractList
