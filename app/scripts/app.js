@@ -20,23 +20,21 @@ angular
     .config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/root/viewContract');
 
-    $stateProvider
-      .state('root', {
-        url: '/root',
-        templateUrl: 'views/main.html',
-        controller: 'rootCtrl',
-        abstract: true
-      })
-      .state('root.viewContract', {
-        url: '/viewContract',
-        templateUrl: 'views/viewContract.html',
-        controller: 'viewContractCtrl'
-      })
-      .state('root.manageContract',{
-        url:'/manageContract',
-        templateUrl:'views/manageContract.html',
-        controller:'manageContractCtrl'
-      })
-      ;
-  });
-       
+        $stateProvider
+            .state('root', {
+                url: '/root',
+                templateUrl: 'views/main.html',
+                controller: 'rootCtrl',
+                abstract: true
+            })
+            .state('root.viewContract', {
+                url: '/viewContract',
+                templateUrl: 'views/viewContract.html',
+                controller: 'viewContractCtrl'
+            })
+            .state('root.manageContract', {
+                url: '/manageContract',
+                templateUrl: 'views/manageContract.html',
+                controller: 'manageContractCtrl'
+            });
+    });
