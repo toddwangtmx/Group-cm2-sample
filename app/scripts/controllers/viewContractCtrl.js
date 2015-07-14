@@ -5,7 +5,6 @@ angular.module('cm2App')
         $scope.contracts = [];
         getContractService.getContract(function(response) {
             $scope.contracts = response.contracts;
-            console.log(response.contracts);
             $scope.removeRow = function(removeItem) {
                 var contracts = $scope.contracts;
                 var length = contracts.length;
