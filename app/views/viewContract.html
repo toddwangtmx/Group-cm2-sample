@@ -24,14 +24,14 @@
             <th>Action</th>
         </tr>
         <tr ng-repeat="contract in filteredcontract=(contracts  | filter:search) " >
-            <td>{{$index + 1}}. {{contract.contractName}}</td>
+            <td>{{contract.contractName}}</td>
             <td>{{contract.provider}}</td>
             <td>{{contract.receiver}}</td>
             <td>{{contract.type}}</td>
             <td>{{contract.value}}</td>
             <td>
                 <button class="btn btn-default btn-info" ng-click="redirect()">Go</button>
-                <button class="btn btn-default btn-danger" ng-click="removeRow($index)">Del</button>
+                <button class="btn btn-default btn-danger" ng-click="removeRow(contracts.contractName)">Del</button>
             </td>
         </tr>
         <td ng-show="!filteredcontract.length" >No data to show</td>
