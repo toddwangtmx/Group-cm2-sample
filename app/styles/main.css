@@ -56,7 +56,7 @@ body {
     margin-right: 5px;
     margin-bottom: 10px;
 }
-#contractName{
+#contract_name{
 	width:240px;
 }
 #provider{
@@ -65,7 +65,7 @@ body {
 #receiver{
 	width: 127px;
 }
-#contractType{
+#contract_type{
 	width:155px;}
 #contractName {
     width: 265px;

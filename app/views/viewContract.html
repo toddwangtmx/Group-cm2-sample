@@ -1,6 +1,6 @@
 <div class="input" style="padding-left:50px; padding-top:10px">
     <h4>FILTER BY</h4>
-    <div class="inputbox" id="contractName">CONTRACT NAME:
+    <div class="inputbox" id="contract_name">CONTRACT NAME:
         <input type="text" class="form-control" ng-model="search.contractName">
     </div>
     <div class="inputbox" id="provider">PROVIDER:
@@ -9,13 +9,12 @@
     <div class="inputbox" id="receiver">RECEIVER:
         <input type="text" class="form-control" ng-model="search.receiver">
     </div>
-    <div class="inputbox" id="contractType">CONTRACT TYPE:
+    <div class="inputbox" id="contract_type">CONTRACT TYPE:
         <input type="text" class="form-control" ng-model="search.type">
     </div>
     <div class="inputbox" id="value">VALUE:
         <input type="text" class="form-control" ng-model="search.value">
     </div>
-    <!-- <<<<<<< HEAD -->
     <table class="table table-striped table-bordered table-hover fixed_headers">
         <thead>
             <tr>
@@ -44,31 +43,4 @@
             </tr>
         </tbody>
     </table>
-    <!-- =======
-    <table class="table table-striped table-bordered table-hover">
-        <tr class="info">
-            <th>Contract Name</th>
-            <th>Cell Provider</th>
-            <th>Cell Receiver</th>
-            <th>Contract Type</th>
-            <th>Value</th>
-            <th>Action</th>
-        </tr>
-        <tr ng-repeat="contract in filteredcontract=(contracts  | filter:search) " >
-            <td>{{$index + 1}}. {{contract.contractName}}</td>
-            <td>{{contract.provider}}</td>
-            <td>{{contract.receiver}}</td>
-            <td>{{contract.type}}</td>
-            <td>{{contract.value}}</td>
-            <td>
-                <button class="btn btn-default btn-info" ng-click="redirect()">Go</button>
-                <button class="btn btn-default btn-danger" ng-click="removeRow($index)">Del</button>
-            </td>
-        </tr>
-        <td ng-show="!filteredcontract.length" >No data to show</td>
-        <tr>
-
-        </tr>
-            </table>
->>>>>>> f4e0efb15ccb88929f2e6bbf7443e76746d30098 -->
 </div>
