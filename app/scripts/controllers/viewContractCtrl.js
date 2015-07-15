@@ -5,24 +5,26 @@ angular.module('cm2App')
         $scope.contracts = [];
         getContractService.getContract(function(response) {
             $scope.contracts = response.contracts;
-            console.log(response.contracts);
-            $scope.removeRow = function(removeItem) {
-                var contracts = $scope.contracts;
-                var length = contracts.length;
-                var removeIndex = -1;
-                for (var ii = 0; ii < length; ii++) {
-                    if (angular.equals(contracts[ii], removeItem)) {
-                        removeIndex = ii;
-                        break;
-                    }
-                }
-                if (window.confirm("Are you sure???")) {
-                    $scope.contracts.splice(removeIndex, 1);
-                }
-            }
-            $scope.redirect = function() {
-                $state.go('root.manageContract');
-            }
-
         });
+
+        $scope.removeRow = function(removeItem) {
+            console.log($scope.contracts.length);
+            var contracts = $scope.contracts;
+            var length = contracts.length;
+            var removeIndex = -1;
+            for (var ii = 0; ii < length; ii++) {
+                if (angular.equals(contracts[ii], removeItem)) {
+                    removeIndex = ii;
+                    break;
+                }
+            }
+            if (window.confirm("Are you sure???")) {
+                $scope.contracts.splice(removeIndex, 1);
+            }
+            console.log($scope.contracts.length);
+        }
+
+        $scope.redirect = function() {
+            $state.go('root.manageContract');
+        }
     });
